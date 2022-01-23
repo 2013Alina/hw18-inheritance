@@ -17,25 +17,26 @@ public class EmployeeAndTax extends Employee {
 
     @Override
     public void setPaymentType(String paymentType) {
-        if(paymentType.equals(PaymentTypes.HOURLY)){
+        if (paymentType.equals(PaymentTypes.HOURLY)) {
             tax = 20;
         }
-        if(paymentType.equals(PaymentTypes.RATE)){
+        if (paymentType.equals(PaymentTypes.RATE)) {
             tax = 15;
         }
-        if(paymentType.equals(PaymentTypes.JOB_PRICE)){
+        if (paymentType.equals(PaymentTypes.JOB_PRICE)) {
             tax = 15;
         }
     }
 
-    public double getPaymentWithTax(double payment){
+    public double getPaymentWithTax(double payment) {
         double sum;
-        sum = (payment*(100 - tax))/100;
+        sum = (payment * (100 - tax)) / 100;
         return sum;
     }
 
     @Override
     public String toString() {
-        return String.format("%-8s | %-9s | %-11s | %.1f грн ", getFullName(), tax, getPayment(),getPaymentWithTax(getPayment()));
+        return String.format("%-8s | %-9s | %-11s | %.1f грн ",
+                getFullName(), tax, getPayment(), getPaymentWithTax(getPayment()));
     }
 }

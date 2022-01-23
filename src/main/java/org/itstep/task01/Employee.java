@@ -9,8 +9,6 @@ public class Employee {
         this.fullName = fullName;
         this.paymentType = paymentType;
         this.payment = payment;
-
-
     }
 
     public String getFullName() {

@@ -45,7 +45,7 @@ public class Main {
         for (Employee employee : employees) {
 //            employee.setPaymentType(employee.getPaymentType());
             System.out.println(employee);
-            sum += employee.getPayment();
+            sum += ((EmployeeAndTax)employee).getPaymentWithTax(employee.getPayment());
         }
         System.out.println(" Итого   |           |             | " + sum);
     }

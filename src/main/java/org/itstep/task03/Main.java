@@ -4,6 +4,7 @@ package org.itstep.task03;
 
 import org.itstep.PaymentTypes;
 import org.itstep.task01.Employee;
+import org.itstep.task02.EmployeeAndTax;
 
 /**
  * Задание 3
@@ -40,7 +41,7 @@ public class Main {
         double sum = 0;
         for (Employee employee : employees) {
             System.out.println(employee);
-            sum += employee.getPayment();
+            sum += ((EmployeeAndTax)employee).getPaymentWithTax(employee.getPayment());
         }
         System.out.println(" Итого   |           |             | " + sum);
     }
