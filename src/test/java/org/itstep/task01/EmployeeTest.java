@@ -1,13 +1,17 @@
 package org.itstep.task01;
 
+import org.itstep.PaymentTypes;
 import org.junit.jupiter.api.Test;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class EmployeeTest {
 
+
     @Test
     void getFullName() {
+
     }
 
     @Test
