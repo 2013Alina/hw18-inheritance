@@ -15,6 +15,10 @@ public class EmployeeAndTax extends Employee {
         return tax;
     }
 
+    public void setTax(int tax) {
+        this.tax = tax;
+    }
+
     @Override
     public void setPaymentType(String paymentType) {
         if (paymentType.equals(PaymentTypes.HOURLY)) {
